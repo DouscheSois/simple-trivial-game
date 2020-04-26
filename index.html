@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Trivial Game</title>
+</head>
+<body>
+  <h3 class="timer" id="timer"></h3>
+  <div class="container-one">
+    <div class="question" id="main-screen">
+      <div class="question-start">
+        <h1>Answer as many as you can!</h1>
+        <button type="button" name="button" onClick="startGame()">START</button>
+      </div>
+    </div>
+    <div class="win" id="win">
+      <div class="title">
+        <h3>YOU'VE WON!</h3>
+      </div>
+    </div>
+    <!--- Question 1 -->
+    <div class="question-one" id="question-one">
+      <div class="title">
+        <h3>How many days end with 'day'?</h3>
+        <div class="answers">
+          <button class="answer-button" type="button" name="button">Two</button>
+          <button class="answer-button" type="button" name="button">None</button>
+          <button class="answer-button" type="button" name="button">Five</button>
+          <button class="answer-button" id="right-answer" type="button" name="button">Seven</button>
+        </div>
+      </div>
+    </div>
+    <!--- Question 2 -->
+    <div class="question-two" id="question-two">
+      <div class="title">
+        <h3>What credit card company has 'express' in its name?</h3>
+        <div class="answers">
+          <button class="answer-button" type="button" name="button">Express Card</button>
+          <button class="answer-button" id="right-answer-two" type="button" name="button">American Express</button>
+          <button class="answer-button" type="button" name="button">Black Express</button>
+          <button class="answer-button" type="button" name="button">Canadian Express</button>
+        </div>
+      </div>
+    </div>
+    <!--- Question 3 -->
+    <div class="question-three" id="question-three">
+      <div class="title">
+        <h3>Does Trump like to golf?</h3>
+        <div class="answers">
+          <button class="answer-button" type="button" name="button">No</button>
+          <button class="answer-button" type="button" name="button">Maybe</button>
+          <button class="answer-button" id="right-answer-three" type="button" name="button">Yes</button>
+          <button class="answer-button" type="button" name="button">No Idea</button>
+        </div>
+      </div>
+    </div>
+    <!--- Question 4 -->
+    <div class="question-four" id="question-four">
+      <div class="title">
+        <h3>In Despicable Me, what's the name of the youngest sibling?</h3>
+        <div class="answers">
+          <button class="answer-button" id="right-answer-four" type="button" name="button">Agnes</button>
+          <button class="answer-button" type="button" name="button">Kim</button>
+          <button class="answer-button" type="button" name="button">Jenny</button>
+          <button class="answer-button" type="button" name="button">Mina</button>
+        </div>
+      </div>
+    </div>
+    <!--- Question 5 -->
+    <div class="question-five" id="question-five">
+      <div class="title">
+        <h3>What car brand has 3 letters?</h3>
+        <div class="answers">
+          <button class="answer-button" type="button" name="button">Mercedes</button>
+          <button class="answer-button" type="button" name="button">Porsche</button>
+          <button class="answer-button" type="button" name="button">Honda</button>
+          <button class="answer-button" id="right-answer-five" type="button" name="button">BMW</button>
+        </div>
+      </div>
+    </div>
+    <!--- Question 6 -->
+    <div class="question-six" id="question-six">
+      <div class="title">
+        <h3>How do you say 'fat' in spanish?</h3>
+        <div class="answers">
+          <button class="answer-button" id="right-answer-six" type="button" name="button">Gordo</button>
+          <button class="answer-button" type="button" name="button">Chato</button>
+          <button class="answer-button" type="button" name="button">Torpe</button>
+          <button class="answer-button" type="button" name="button">Grande</button>
+        </div>
+      </div>
+    </div>
+    <!--- Question 7 -->
+    <div class="question-seven" id="question-seven">
+      <div class="title">
+        <h3>What's Nikes' logo?</h3>
+        <div class="answers">
+          <button class="answer-button" type="button" name="button">An x</button>
+          <button class="answer-button" id="right-answer-seven" type="button" name="button">A check</button>
+          <button class="answer-button" type="button" name="button">The 'and' sign</button>
+          <button class="answer-button" type="button" name="button">A dash</button>
+        </div>
+      </div>
+    </div>
+    <!--- Question 8 -->
+    <div class="question-eight" id="question-eight">
+      <div class="title">
+        <h3>How many U.S. states are there?</h3>
+        <div class="answers">
+          <button class="answer-button" type="button" name="button">Forty</button>
+          <button class="answer-button" id="right-answer-eight" type="button" name="button">Fifty</button>
+          <button class="answer-button" type="button" name="button">Fifty-two</button>
+          <button class="answer-button" type="button" name="button">Fifty-five</button>
+        </div>
+      </div>
+    </div>
+    <!--- Question 9 -->
+    <div class="question-nine" id="question-nine">
+      <div class="title">
+        <h3>What's 5 times 3?</h3>
+        <div class="answers">
+          <button class="answer-button" type="button" name="button">Eight</button>
+          <button class="answer-button" type="button" name="button">Ten</button>
+          <button class="answer-button" id="right-answer-nine" type="button" name="button">Fifteen</button>
+          <button class="answer-button" type="button" name="button">Twelve</button>
+        </div>
+      </div>
+    </div>
+    <!--- Question 10 -->
+    <div class="question-ten" id="question-ten">
+      <div class="title">
+        <h3>Finish the sentence: 'Another one bites the ____'</h3>
+        <div class="answers">
+          <button class="answer-button" type="button" name="button">Cust</button>
+          <button class="answer-button" type="button" name="button">Task</button>
+          <button class="answer-button" id="right-answer-ten" type="button" name="button">Dust</button>
+          <button class="answer-button" type="button" name="button">Can</button>
+        </div>
+      </div>
+    </div>
+    <!--- Question 11 -->
+    <div class="question-eleven" id="question-eleven">
+      <div class="title">
+        <h3>Miami is a city in what state?</h3>
+        <div class="answers">
+          <button class="answer-button" type="button" name="button">Maryland</button>
+          <button class="answer-button" type="button" name="button">Georgia</button>
+          <button class="answer-button" type="button" name="button">California</button>
+          <button class="answer-button" id="right-answer-eleven" type="button" name="button">Florida</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
